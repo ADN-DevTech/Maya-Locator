@@ -1,0 +1,29 @@
+//
+//  Copyright 2012 Autodesk, Inc.  All rights reserved.
+//
+//  Use of this software is subject to the terms of the Autodesk license 
+//  agreement provided at the time of installation or download, or which 
+//  otherwise accompanies this software in either electronic or hard copy form.   
+//
+
+// Release History
+// Written by Cyrille
+// 1.0    Original release                     (October 1, 2012)
+
+global proc AEsphereLocatorTemplate (string $nodeName) {
+	editorTemplate -beginScrollLayout ;
+
+		editorTemplate -beginLayout "Sphere Locator Attributes" -collapse 0;
+			editorTemplate -label "Size" -addControl "size";
+		editorTemplate -endLayout;
+
+		// Include/call base class/node attributes
+		editorTemplate -beginLayout (uiRes("m_AElocatorTemplate.kLocatorAttributes")) -collapse 0;
+			AElocatorCommon $nodeName;
+		editorTemplate -endLayout;
+		
+		AElocatorInclude $nodeName;
+
+	editorTemplate -addExtraControls;
+	editorTemplate -endScrollLayout ;
+}

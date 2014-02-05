@@ -1,0 +1,79 @@
+//
+//  Copyright 2012 Autodesk, Inc.  All rights reserved.
+//
+//  Use of this software is subject to the terms of the Autodesk license 
+//  agreement provided at the time of installation or download, or which 
+//  otherwise accompanies this software in either electronic or hard copy form.   
+//
+
+// Release History
+// Written by Cyrille
+// 1.0    Original release                     (October 1, 2012)
+
+global proc AEshapeNameNew (string $fileNameAttr) {
+	setUITemplate -pst attributeEditorTemplate;
+		columnLayout -adj true;
+			rowLayout -nc 3 fileNameLayout;
+
+        		text -label "Shape filename" fileNameText;
+		        textField fileNameField;
+					symbolButton -image "navButtonBrowse.png" browser;
+
+            setParent ..;
+		setParent ..;
+	setParent ..;
+
+	AEshapeNameReplace ($fileNameAttr);
+}
+
+global proc AEshapeNameReplace (string $fileNameAttr) {
+	string $fileName = `getAttr $fileNameAttr`;
+    string $nodeName = `plugNode $fileNameAttr`;
+
+	// file name attribute
+	//
+    connectControl -fileName fileNameField $fileNameAttr;
+	button -e -c ("AEshapeNameFileBrowser " + $fileNameAttr) browser;
+}
+
+global proc AEshapeNameFileBrowser (string $fileNameAttr) {
+    // prepare filter and starting dir for file dialog
+    string $filter = "Text files (*.txt);;"
+                      + "All files (*.*)";
+
+    // choose a file to import
+    string $result[] = `fileDialog2
+            -returnFilter 1
+            -fileFilter $filter
+            -dialogStyle 2
+            -caption "Assign Shape File"
+            -fileMode 1
+            `;
+    if (size($result) == 0 || size($result[0]) == 0) {
+        // cancelled
+        return;
+    }
+
+    // set the file name attribute of the cache node
+    setAttr $fileNameAttr -type "string" $result[0];
+}
+
+global proc AEcustomLocatorTemplate (string $nodeName) {
+	editorTemplate -beginScrollLayout ;
+
+		editorTemplate -beginLayout "Custom Locator Attributes" -collapse 0;
+			editorTemplate -label "Size" -addControl "size";
+			editorTemplate -callCustom AEshapeNameNew AEshapeNameReplace "shapeName";
+		editorTemplate -endLayout;
+
+		// Include/call base class/node attributes
+		editorTemplate -beginLayout (uiRes("m_AElocatorTemplate.kLocatorAttributes")) -collapse 0;
+			AElocatorCommon $nodeName;
+		editorTemplate -endLayout;
+		
+		AElocatorInclude $nodeName;
+
+	editorTemplate -addExtraControls;
+	editorTemplate -endScrollLayout ;
+}
+
