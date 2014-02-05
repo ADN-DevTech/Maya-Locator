@@ -95,28 +95,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\BuildMe.txt" />
-    <None Include="LocatorLib.mod" />
-    <None Include="AEcubeLocatorTemplate.mel">
-      <Filter>MEL Scripts</Filter>
-    </None>
-    <None Include="AEcustomLocatorTemplate.mel">
-      <Filter>MEL Scripts</Filter>
-    </None>
-    <None Include="AEovalLocatorTemplate.mel">
-      <Filter>MEL Scripts</Filter>
-    </None>
-    <None Include="AEsphereLocatorTemplate.mel">
-      <Filter>MEL Scripts</Filter>
-    </None>
-    <None Include="AEsquareLocatorTemplate.mel">
-      <Filter>MEL Scripts</Filter>
-    </None>
     <None Include="pyramid.txt">
       <Filter>Samples</Filter>
     </None>
     <None Include="shape.txt">
       <Filter>Samples</Filter>
     </None>
-    <None Include="..\ReadMe.txt" />
+    <None Include="..\..\scripts\AEcubeLocatorTemplate.mel">
+      <Filter>MEL Scripts</Filter>
+    </None>
+    <None Include="..\..\scripts\AEcustomLocatorTemplate.mel">
+      <Filter>MEL Scripts</Filter>
+    </None>
+    <None Include="..\..\scripts\AEovalLocatorTemplate.mel">
+      <Filter>MEL Scripts</Filter>
+    </None>
+    <None Include="..\..\scripts\AEsphereLocatorTemplate.mel">
+      <Filter>MEL Scripts</Filter>
+    </None>
+    <None Include="..\..\scripts\AEsquareLocatorTemplate.mel">
+      <Filter>MEL Scripts</Filter>
+    </None>
+    <None Include="..\..\README.md" />
+    <None Include="..\..\LocatorLib.mod" />
   </ItemGroup>
 </Project>

@@ -137,7 +137,11 @@ MBoundingBox cubeLocatorDrawOverride::boundingBox (const MDagPath &objPath, cons
 	return (cubeLocator::boundingbox (multiplier)) ;
 }
 
+#ifdef preMaya2014
 MUserData *cubeLocatorDrawOverride::prepareForDraw (const MDagPath &objPath, const MDagPath &cameraPath, MUserData *oldData) {
+#else
+MUserData *cubeLocatorDrawOverride::prepareForDraw (const MDagPath &objPath, const MDagPath &cameraPath, const MHWRender::MFrameContext &frameContext, MUserData *oldData) {
+#endif
 	// Retrieve data cache (create if does not exist)
 	cubeLocatorData *data =dynamic_cast<cubeLocatorData *>(oldData) ;
 	if ( !data )

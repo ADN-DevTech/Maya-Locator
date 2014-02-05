@@ -95,22 +95,22 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{70836e6b-f4c5-4aaf-bfae-2615347c9151}</UniqueIdentifier>
+      <UniqueIdentifier>{25E479F5-FB8D-4A33-8962-D79F9490F228}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{e6745db0-bad0-4796-bcb3-da2959cefe47}</UniqueIdentifier>
+      <UniqueIdentifier>{E0DB2589-2C03-4911-A0F3-139E90434EFD}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
     <Filter Include="Resource Files">
-      <UniqueIdentifier>{de88a94b-08a1-4254-9d42-8ffe2e74b72c}</UniqueIdentifier>
+      <UniqueIdentifier>{122F520C-49D9-4E1D-BC4C-C219182017F3}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="MEL Scripts">
-      <UniqueIdentifier>{42887074-643e-478a-95b9-910e6c46a14f}</UniqueIdentifier>
+      <UniqueIdentifier>{64F51C3B-144C-4972-8073-FBBDB043E8A2}</UniqueIdentifier>
     </Filter>
     <Filter Include="Samples">
-      <UniqueIdentifier>{a7540af5-5f91-466a-abd0-376e6000f336}</UniqueIdentifier>
+      <UniqueIdentifier>{384D046C-8974-4C2E-9DAF-A2E588E81551}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

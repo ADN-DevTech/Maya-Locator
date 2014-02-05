@@ -133,7 +133,11 @@ MBoundingBox ovalLocatorDrawOverride::boundingBox (const MDagPath &objPath, cons
 	return (ovalLocator::boundingbox (multiplier)) ;
 }
 
+#ifdef preMaya2014
 MUserData *ovalLocatorDrawOverride::prepareForDraw (const MDagPath &objPath, const MDagPath &cameraPath, MUserData *oldData) {
+#else
+MUserData *ovalLocatorDrawOverride::prepareForDraw (const MDagPath &objPath, const MDagPath &cameraPath, const MHWRender::MFrameContext &frameContext, MUserData *oldData) {
+#endif
 	// Retrieve data cache (create if does not exist)
 	ovalLocatorData *data =dynamic_cast<ovalLocatorData *>(oldData) ;
 	if ( !data )

@@ -290,6 +290,10 @@
 #include <maya/MFnVortexField.h>
 #include <maya/MFnWeightGeometryFilter.h>
 #include <maya/MFnWireDeformer.h>
+#ifndef preMaya2014
+#include <maya/MFragmentManager.h>
+#include <maya/MFrameContext.h>
+#endif
 #include <maya/MFStream.h>
 #include <maya/MGeometry.h>
 #include <maya/MGeometryData.h>

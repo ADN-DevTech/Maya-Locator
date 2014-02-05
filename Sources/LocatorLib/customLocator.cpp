@@ -130,7 +130,11 @@ MBoundingBox customLocatorDrawOverride::boundingBox (const MDagPath &objPath, co
 	return (shape.boundingbox (multiplier)) ;
 }
 
+#ifdef preMaya2014
 MUserData *customLocatorDrawOverride::prepareForDraw (const MDagPath &objPath, const MDagPath &cameraPath, MUserData *oldData) {
+#else
+MUserData *customLocatorDrawOverride::prepareForDraw (const MDagPath &objPath, const MDagPath &cameraPath, const MHWRender::MFrameContext &frameContext, MUserData *oldData) {
+#endif
 	// Retrieve data cache (create if does not exist)
 	customLocatorData *data =dynamic_cast<customLocatorData *>(oldData) ;
 	if ( !data )

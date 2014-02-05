@@ -61,7 +61,11 @@ public:
 	virtual ~cubeLocatorDrawOverride () {}
 
 	virtual MBoundingBox boundingBox (const MDagPath &objPath, const MDagPath &cameraPath) const ;
-	virtual MUserData* prepareForDraw (const MDagPath &objPath, const MDagPath &cameraPath, MUserData *oldData) ;
+#ifdef preMaya2014
+	virtual MUserData *prepareForDraw (const MDagPath &objPath, const MDagPath &cameraPath, MUserData *oldData) ;
+#else
+	virtual MUserData *prepareForDraw (const MDagPath &objPath, const MDagPath &cameraPath, const MHWRender::MFrameContext &frameContext, MUserData *oldData) ;
+#endif
 
 	static void draw (const MHWRender::MDrawContext &context, const MUserData *data) ;
 	static MHWRender::MPxDrawOverride *Creator (const MObject &obj) { return (new cubeLocatorDrawOverride (obj)) ; }

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LocatorLib", "Sources\LocatorLib.vcxproj", "{C2B1C75F-B1B3-44BF-9D13-10A771F7FA8E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LocatorLib2013", "LocatorLib\LocatorLib.vcxproj", "{C2B1C75F-B1B3-44BF-9D13-10A771F7FA8E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LocatorLib-5", "Sources\LocatorLib-5.vcxproj", "{6B205358-6FF9-4690-8388-55CA41A783BF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LocatorLib2013-5", "LocatorLib\LocatorLib-5.vcxproj", "{6B205358-6FF9-4690-8388-55CA41A783BF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LocatorLib2014", "LocatorLib\LocatorLib2014.vcxproj", "{3B922D50-1904-4845-A912-56090FCE761F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,11 @@ Global
 		{6B205358-6FF9-4690-8388-55CA41A783BF}.Release|Win32.Build.0 = Release|Win32
 		{6B205358-6FF9-4690-8388-55CA41A783BF}.Release|x64.ActiveCfg = Release|x64
 		{6B205358-6FF9-4690-8388-55CA41A783BF}.Release|x64.Build.0 = Release|x64
+
+		{3B922D50-1904-4845-A912-56090FCE761F}.Debug|x64.ActiveCfg = Debug|x64
+		{3B922D50-1904-4845-A912-56090FCE761F}.Debug|x64.Build.0 = Debug|x64
+		{3B922D50-1904-4845-A912-56090FCE761F}.Release|x64.ActiveCfg = Release|x64
+		{3B922D50-1904-4845-A912-56090FCE761F}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
