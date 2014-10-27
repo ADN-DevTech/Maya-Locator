@@ -1,34 +1,10 @@
-Copyright (c) Autodesk, Inc. All rights reserved 
-
-Maya Locator sample
-by Cyrille Fauvel / Naiqi Weng - Autodesk Developer Network (ADN)
-October 2012
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
 Maya Locator Library - Plug-in of the Month, October 2012
 =======================================
 
 Description
 -----------
 
-This plug-in allows users to create different shapes of locators other than Mayaís internal built-in locator. It provides a custom command, which has 5 built-in flags, 
+This plug-in allows users to create different shapes of locators other than Maya‚Äôs internal built-in locator. It provides a custom command, which has 5 built-in flags, 
 allowing users to create 4 different basic types of locator, specifically an oval-shape locator, a square-shape locator, a cube-shape locator and a sphere-shape locator.
 
 It also provide a 'custom' locator which allow the use to define its own locator shape. There is 2 functional modes for the 'custom'.
@@ -44,7 +20,7 @@ It also provide a 'custom' locator which allow the use to define its own locator
    with a serie of 3d coordinates X, Y, Z for vertices, and then a serie of triangle vertex index defined above.
 
    
-Execute ìhelp LocatorLibCmdî for more details.
+Execute ‚Äúhelp LocatorLibCmd‚Äù for more details.
 
 
 'Shape mode' file format description
@@ -146,6 +122,7 @@ Author
 ------
 This plug-in was written by Naiq Weng and Cyrille Fauvel from the Autodesk Developer Network team. 
 
+
 Further Reading
 ---------------
 For more information on developing with Maya, please visit the [Maya Developer Center at http://www.autodesk.com/developmaya](http://www.autodesk.com/developmaya)
@@ -153,6 +130,11 @@ For more information on developing with Maya, please visit the [Maya Developer C
 Feedback
 --------
 Email us at labs.plug-ins@autodesk.com with feedback or requests for enhancements.
+
+
+License
+--------
+This sample is licensed under the terms of the [MIT License](http://opensource.org/licenses/MIT). Please see the [LICENSE](LICENSE) file for full details.
 
 
 Release History
